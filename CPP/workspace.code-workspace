@@ -1,0 +1,26 @@
+{
+"folders": [
+  {
+    "path": "waiterman"
+  },
+  {
+    "path": "cap1"
+  },
+  {
+    "path": "helloWorld"
+  },
+  {
+    "path": "buckysTutorial"
+  },
+  {
+    "path": "cap2"
+  }
+],
+  "settings": {
+    "files.associations": {
+      "typeinfo": "cpp",
+      "ostream": "cpp",
+      "iosfwd": "cpp"
+    }
+  }
+}

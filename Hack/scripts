@@ -1,0 +1,30 @@
+SQUID (nano /etc/squid/squid.conf)
+acl localnet src 192.168.0.0/16 (uncomment)
+http_access allow localnet (uncomment)
+http_port 3128 transparent (add "transparent")
+url_rewrite_program <PATH>/asciiImages.pl
+
+iptables -t nat -A PREROUTING -i <device> -p tcp --destination-port 80 -j REDIRECT --to-port 3128
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+APACHE config
+mkdir /var/www/tmp
+chmod 777 /var/www/tmp
+
+service squid restart
+service apache restart
+
+START arpspoof
+
+asciiImages.pl - Converts images into ASCII art (www.msn.com)
+blurImages.pl - Makes images harder to see (www.flickr.com)
+flipImages.pl - Flips images vertical (www.google.com)
+flopImages.pl - Flips images vertically (www.google.com)
+googleSearch.pl - Modifies Google search queries (www.google.com)
+noInternet.pl - Replace every website (www.bing.com)
+replaceImages.pl - Replace every image (www.ebay.com)
+replacePages.pl - Replace a selected site with ours (www.facebook.com)
+rickrollYoutube.pl - Redirect to a youtube video (www.twitter.com)
+timeMachine.pl - Uses archive.org archives (www.bbc.co.uk)
+touretteImages.pl - Add words to images (www.yahoo.com)
+

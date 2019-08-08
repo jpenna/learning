@@ -1,0 +1,15 @@
+truffle migrate
+
+truffle migrate --reset
+
+truffle console
+
+Greetings.deployed().then(function(instance){app = instance})
+
+app.getGreetings()
+
+app.setGreetings("hello you", { from: web3.eth.accounts[0] })
+
+app.getGreetings()
+
+.exit

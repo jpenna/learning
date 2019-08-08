@@ -1,0 +1,14 @@
+const sellEvent = app.sellArticleEvent({}, { fromBlock: 0, toBlock: 'latest' }).watch((err, event) => console.log(event))
+
+app.sellArticle('article 1', 'one article', web3.toWei(10, 'ether'), { from: web3.eth.accounts[1] })
+
+sellEvent.stopWatching()
+
+
+------------ unlock
+personal.unlockAccount(eth.accounts[1], "pass123", 3600)
+
+
+
+------ syncing
+eth.syncing
