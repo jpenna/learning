@@ -51,4 +51,12 @@ y - copy
 p - paste
 ```
 
+## Indent
+
+```
+SHIFT + v
+select...
+SHIFT + . <. as many times as need>
+```
+
 
