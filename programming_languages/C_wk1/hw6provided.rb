@@ -77,7 +77,10 @@ class Piece
   end
 
   # class array holding all the pieces and their rotations
-  All_Pieces = [[[[0, 0], [1, 0], [0, 1], [1, 1]]],  # square (only needs one)
+  All_Pieces = [
+                [
+                  [[0, 0], [1, 0], [0, 1], [1, 1]]
+                ],  # square (only needs one)
                rotations([[0, 0], [-1, 0], [1, 0], [0, -1]]), # T
                [[[0, 0], [-1, 0], [1, 0], [2, 0]], # long (only needs two)
                [[0, 0], [0, -1], [0, 1], [0, 2]]],
@@ -211,8 +214,7 @@ class Board
     displacement = @current_block.position
     (0..3).each{|index|
       current = locations[index];
-      @grid[current[1]+displacement[1]][current[0]+displacement[0]] =
-      @current_pos[index]
+      @grid[current[1]+displacement[1]][current[0]+displacement[0]] = @current_pos[index]
     }
     remove_filled
     @delay = [@delay - 2, 80].max
